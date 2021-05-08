@@ -16,6 +16,9 @@ router.get('/addproduct',(req , res , next)=>{//functioning on hitting link '/ad
          res.sendFile(path.join(__dirname , "../" , "views" , "fillform.html"));
     });
     
+router.post('/addproduct',(req , res , next) =>{
+   res.redirect('/shophome');  
+});
 
 
 
