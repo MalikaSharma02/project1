@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <link rel = "stylesheet" href ="/css/main.css">
+        <title> Form Page</title>
+    </head>
+    <body bgcolor="yellow">
+        <h1 style='text-align: center;text-decoration-color: khaki;'>Fill up the Form Below!!!</h1>
+        <hr>
+        <div class="mydiv">
+        <form method='POST' action="/admin/addproduct">
+            <br>
+            <br>
+            <label for="textip">Enter Product :</label>
+            <input type='text' id='textip' name='bodyInput'/>
+            <br>
+            <br>
+            <label for="price">Enter Price :</label>
+            <input type="number" id="price" name='priceInput'/>
+            <br>
+            <br>
+            <label for="desc">Enter Description :</label>
+            <input type="text" id="desc" name='descInput'/>
+            <br>
+            <br>
+            <input type="submit"  value="ADD PRODUCT"/>
+        </form>
+        </div>
+    </body>
+</html>

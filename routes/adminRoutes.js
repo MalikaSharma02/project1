@@ -1,8 +1,23 @@
-const path = require('path');//path module
-const router = require('express').Router();//a new router object created to handle requests.
+const path = require('path');//reuiring path module to join paths
+const router = require('express').Router();//router object to handle requests
+ 
+// router.get('/',(req , res , next )=>{//functioning on hitting blank link
+//     console.log(__dirname);
+//    console.log(" inside blank slash");
+// });
 
-router.get('/shophome',(req , res , next) =>//working for the link shophome inside the middleware
-{
-    res.send("<h1 style='color:purple;text-align:center;'>This is the homepage</h1>");
+router.get('/',(req , res , next)=>{//functioning on hitting link '/addproduct'
+//    res.send("<h1 style='text-align:center;color:olive;'>Add products here!!!<h1>")
+     res.sendFile(path.join(__dirname , "../" , "views" , "adminView.html"));
 });
-module.exports =  router;
+
+router.get('/addproduct',(req , res , next)=>{//functioning on hitting link '/addproduct'
+    //    res.send("<h1 style='text-align:center;color:olive;'>Add products here!!!<h1>")
+         res.sendFile(path.join(__dirname , "../" , "views" , "fillform.html"));
+    });
+    
+
+
+
+module.exports = router; //module is a variable & export is an object
+// Anything assigned to it will impose as a module.
